@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Doc</title>
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('top')">
+			<span>Progs</span>
+		</div>
+		<div id="about">
+			<a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+			<a href="#" title="Преимущества" onclick="slowScroll('#overiew')">Преимущества</a>
+			<a href="#" title="Контакты" onclick="slowScroll('#contacts')">Контакты</a>
+			<a href="#" title="FAQ" onclick="slowScroll('#faq')">FAQ</a>
+		</div>
+	</header>
+
+	<div id="top">
+		<h1>Програмирование</h1>
+		<h3>Как жизнь, от тебя зависит</h3>
+	</div>
+
+	<div id="main">
+		<div class="intro">
+			<h2>Мои услуги помогут мне и тебе!</h2>
+			<span>Вещи которые могут вам пригодится</span>
+		</div>
+		<div class="text">
+			<span> Жил был волк, и однажды он искал себе пропитание и его застрелили браконьеры.</span>
+		</div>
+	</div>
+
+	<div id="overview">
+		<h2>H2Слова</h2>
+		<h4>H4слово</h4>
+
+	<div class="img">
+		<img src="" alt="">
+		<span>HtmlBook</span>
+	</div>
+	<div class="img">
+		<img src="" alt="">
+		<span>Учения англиского</span>
+	</div>
+	<div class="img">
+		<img src="" alt="">
+		<span>HtmlBook</span>
+	</div>
+	<div class="img">
+		<img src="" alt="">
+		<span>HtmlBook</span>
+	</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		function slowScroll(id){
+			$('html','body').animate({
+				scrollTop:$(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function (){
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class", "fixed");
+		});
+	</script>
+</body>
+</html>
